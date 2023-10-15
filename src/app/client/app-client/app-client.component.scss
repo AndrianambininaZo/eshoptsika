@@ -1,0 +1,62 @@
+.container__client{
+    header{
+        height: auto;        
+        background: rgb(221, 216, 216);
+        padding: .5rem;
+        .main__header{
+            display: flex;
+        justify-content: space-between;
+            .contact{
+                display: flex;
+                gap: 1.5rem;
+            }
+            .resaeau__sociaux{
+                display: flex;
+                gap: 1.5rem;
+                a{
+                    color: rgb(99, 87, 87);
+                    &:hover{
+                        color: brown;
+                    }
+                }
+
+            }
+
+        }
+        
+    } 
+    nav{
+        margin-top: 1rem;
+        .side__bar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .side__left{
+                display: flex;
+                gap: 1rem;
+                align-items:end;
+                a{
+                    text-decoration: none;
+                    color: rgb(99, 87, 87);
+                    font-weight: 500;
+                    &:hover{
+                        color: brown;
+                    }
+                }
+            }
+            .side__rigth{
+                display: flex;
+                gap: 1rem;
+                a{
+                    text-decoration: none;
+                    color: rgb(99, 87, 87);
+                    font-weight: 500;
+                    &:hover{
+                        color: brown;
+                    }
+                }
+
+            }
+        }
+    }   
+}
