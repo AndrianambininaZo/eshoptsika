@@ -1,1 +1,28 @@
-<p>dasboard-client works!</p>
+<div class="container__dasboard__client">
+  <div class="carousel">
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of images">
+        <ng-template carouselSlide >
+          <div class="ng__tamplate">
+            <div class="info">
+              <span>Robe de femme</span>
+              <span>Femme</span>            
+            </div>          
+            <img class="img" [src]="slide" alt="Image" title="side__bar">
+          </div>          
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+  <div class="new__produit">
+    <div class="new__title">
+      <div class="new__tire"></div>
+      <div class="new__span">Noveau produit</div>
+      <div class="new__tire"></div>
+    </div> 
+    <div class="new__list">
+      <div class="">
+      </div>
+    </div>   
+  </div>    
+</div>

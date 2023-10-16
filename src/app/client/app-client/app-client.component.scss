@@ -39,6 +39,11 @@
                     text-decoration: none;
                     color: rgb(99, 87, 87);
                     font-weight: 500;
+                    font-size:calc(18px + 0.1vw);
+                    span{
+                        color: brown;
+                        font-size:calc(20px + 0.1vw);
+                    }
                     &:hover{
                         color: brown;
                     }
@@ -58,5 +63,8 @@
 
             }
         }
-    }   
+    }  
+    main{
+        margin-top: 1rem;
+    } 
 }

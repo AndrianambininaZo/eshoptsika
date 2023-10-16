@@ -7,6 +7,8 @@ import { AppClientComponent } from './client/app-client/app-client.component';
 import { DasboardClientComponent } from './client/dasboard-client/dasboard-client.component';
 import { AppAdminComponent } from './admin/app-admin/app-admin.component';
 import { DasboardAdminComponent } from './admin/dasboard-admin/dasboard-admin.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { DasboardAdminComponent } from './admin/dasboard-admin/dasboard-admin.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

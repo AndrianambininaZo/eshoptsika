@@ -1,0 +1,37 @@
+.container__dasboard__client{
+    .carousel{
+        position: relative;
+        height: 60vh;
+        margin-bottom: 1rem;
+        .ng__tamplate{
+            height: 100%;
+            
+            .info{
+            }  
+            img{
+                top: 0;
+                width: 100%;
+                height: 60vh;
+            }          
+        }
+    }
+    .new__produit{
+        margin-top: 2.7rem;
+        .new__title{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .new__tire{
+                content: '';
+                height: 5px;
+                flex: 1;
+                background-color: brown
+            }  
+            .new__span{
+                font-size:calc(20px + 0.1vw);
+                margin-left:.7rem; 
+                margin-right: .7rem;               
+            }          
+        }
+    }
+}
