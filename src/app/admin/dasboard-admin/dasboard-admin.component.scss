@@ -1,0 +1,18 @@
+.container__dasboard{
+    width: 100%;
+    padding: 1rem;
+    header{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        
+        .isHeader{
+            flex: 1;
+            background-color: grey;
+            height: 30vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+}

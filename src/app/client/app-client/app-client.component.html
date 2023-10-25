@@ -20,23 +20,47 @@
     <nav class="container">
          <div class="side__bar">
              <div class="side__left"> 
-                 <a routerLink="/"><span>E-</span>ShopTsika</a>
-                 <a href="">Femme</a>
-                 <a href="">Homme</a>  
-                 <a href="">Enfant</a>
-                 <a href="">Sport</a>         
+                 <a routerLink="/"><img src="./../../../assets/images/logoeshop.png" alt="">  <span>  E-</span>ShopTsika</a>
+                 <a routerLink="/femme">Femme</a>
+                 <a routerLink="/homme">Homme</a>  
+                 <a routerLink="/enfant">Enfant</a>
+                 <a routerLink="/sport">Sport</a>         
              </div>
              <div class="side__rigth">
-                 <a href=""><i class="bi bi-heart"></i> Favorie</a>
-                 <a href=""><i class="bi bi-cart"></i> Panier</a>
-                 <a href=""><i class="bi bi-bag-fill"></i> Connexion</a>
+                 <a routerLink="/panier" *ngIf="nombreProduitsDansPanier==0" class="a__panierr"><i class="bi bi-cart"></i><small>{{nombreInitPanie}}</small> Panier</a>
+                 <a routerLink="/panier"  *ngIf="nombreProduitsDansPanier!=0" class="a__panierr"><i class="bi bi-cart"></i><small>{{nombreProduitsDansPanier}}</small>Panier</a>
+                 <a routerLink="/connexion"><i class="bi bi-bag-fill"></i> Connexion</a>
              </div>
          </div> 
-         <div>
- 
+         <div> 
          </div>  
     </nav>
     <main class="container container__main">
         <router-outlet></router-outlet>        
     </main>
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <h3>À propos de nous</h3>
+                    <p>E-ShopTsika donne une satistfait de vous veillez contacter nous pour voir tous les produit noveauter</p>
+                </div>
+                <div class="col-md-4 nos__produit">
+                    <h3>Nos Produits</h3>
+                    <div class="ul">
+                        <a routerLink="/femme">Femme</a>
+                        <a routerLink="/homme">Homme</a>  
+                        <a routerLink="/enfant">Enfant</a>
+                        <a routerLink="/sport">Sport</a> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contactez-nous</h3>
+                    <p>Adresse : Antanimena 101</p>
+                    <p>Téléphone : +261 34 00 000 00</p>
+                    <p>Email : eshoptsik@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
  </div>

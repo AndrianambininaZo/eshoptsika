@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ProduitPanier } from 'src/app/model/admin.model';
+import { PanierService } from 'src/app/service/panier.service';
 
 @Component({
   selector: 'app-app-client',
@@ -6,10 +8,44 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-client.component.scss']
 })
 export class AppClientComponent implements OnInit {
+  nombreProduitsDansPanier!:number
+nombreInitPanie!:number
+  private storageKey = 'proList';
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event): void {
+    const scrollY = window.scrollY; // Obtient la position de défilement en pixels
+    const windowHeight = window.innerHeight; // Obtient la hauteur de la fenêtre visible en pixels
+    const scrollYvh = (scrollY / windowHeight) * 100; // Convertit la position de défilement en vh
 
-  constructor() { }
-
-  ngOnInit(): void {
+    if (scrollYvh >= 50) {
+      console.log("5Ovh plus")
+    }else{
+      console.log("5Ovh moins")      
+    }
   }
+
+  constructor(private servicePanier:PanierService) { 
+    
+  }
+  
+
+  ngOnInit(): void { 
+    this.getListPanier() 
+    this.getList();  
+   
+  }
+  getListPanier(){
+    this.servicePanier.panier$.subscribe(panier => {
+      this.nombreProduitsDansPanier = panier;
+    });
+  }
+  getList():ProduitPanier[] {
+    console.log("salut")
+    const data = localStorage.getItem(this.storageKey);
+    this.nombreInitPanie= data? JSON.parse(data!).length:0
+    return data ? JSON.parse(data) : [];
+  }
+
+
 
 }

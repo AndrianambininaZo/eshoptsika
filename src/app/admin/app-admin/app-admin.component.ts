@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-app-admin',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-admin.component.scss']
 })
 export class AppAdminComponent implements OnInit {
+ 
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
+  }
+  deconnexion(){
+    this.route.navigateByUrl("/eshop_admin/connexion__eshop")
   }
 
 }
